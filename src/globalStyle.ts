@@ -11,8 +11,6 @@ html {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 	-webkit-font-smoothing: antialiased;
-
-	--max-width: calc(1360px + 2rem);
 }
 
 body,
@@ -35,6 +33,7 @@ button {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+	background: ${props => props.theme.colors.background}
 }
 
 button {

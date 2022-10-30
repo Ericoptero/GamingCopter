@@ -1,4 +1,5 @@
 import { ThemeProvider } from "styled-components";
+import { Footer } from "./components/Footer";
 
 import { GamesTable } from "./components/GamesTable";
 import { Header } from "./components/Header";
@@ -15,13 +16,9 @@ export function App() {
 
       <Header />
       <main>
-        <div>
-          Preferred Game
-        </div>
-        
         <GamesTable />
       </main>
-      <footer>GamingCopter 2022.</footer>
+      <Footer />
     </ThemeProvider>
   )
 }
