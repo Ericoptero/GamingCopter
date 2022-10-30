@@ -11,13 +11,15 @@ html {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 	-webkit-font-smoothing: antialiased;
+
+	--max-width: calc(1360px + 2rem);
 }
 
 body,
 input,
 textarea,
 button {
-	/* font-family: $primary-font; */
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size: 1rem;
 }
