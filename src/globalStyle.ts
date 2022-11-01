@@ -33,6 +33,7 @@ button {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+	padding-block: 2rem;
 	background: ${props => props.theme.colors.background}
 }
 
