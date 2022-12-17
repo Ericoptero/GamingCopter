@@ -1,6 +1,7 @@
 type GameStatus = 'Não iniciado' | 'Jogando' | 'Não finalizado' | 'Joguei o suficiente' | 'Finalizado' | 'Desisti' | 'Lista de desejos';
 
 interface GameListData {
+  id: string;
   name: string;
   platform: string;
   status: GameStatus;
@@ -15,6 +16,7 @@ interface GameListData {
 
 export const data: GameListData[] = [
   {
+    id: '123abc',
     name: 'Rune Factory 4 Special',
     platform: 'Nintendo Switch',
     status: 'Finalizado',
@@ -27,6 +29,7 @@ export const data: GameListData[] = [
     notes: 'Gostei muito, meu Rune Factory predileto, porém os gráficos apenas foram escalados, ainda parecem sprites das versões de DS.'
   },
   {
+    id: '234abc',
     name: 'Rune Factory 4 Special',
     platform: 'Nintendo Switch',
     status: 'Finalizado',
@@ -39,6 +42,7 @@ export const data: GameListData[] = [
     notes: 'Gostei muito, meu Rune Factory predileto, porém os gráficos apenas foram escalados, ainda parecem sprites das versões de DS.'
   },
   {
+    id: '345abc',
     name: 'Rune Factory 4 Special',
     platform: 'Nintendo Switch',
     status: 'Finalizado',

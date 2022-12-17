@@ -1,3 +1,5 @@
+import { data } from "../data/gameList";
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -20,39 +22,23 @@ export default function Home() {
                   <th scope="col" className="text-sm font-medium text-gray-50 px-6 py-2 text-left">Status</th>
                   <th scope="col" className="text-sm font-medium text-gray-50 px-6 py-2 text-left">Platform</th>
                   <th scope="col" className="text-sm font-medium text-gray-50 px-6 py-2 text-left">Priority</th>
-                  <th scope="col" className="text-sm font-medium text-gray-50 px-6 py-2 text-left">Started</th>
+                  <th scope="col" className="text-sm font-medium text-gray-50 px-6 py-2 text-left">Released</th>
                   <th scope="col" className="text-sm font-medium text-gray-50 px-6 py-2 text-left">Finished</th>
                   <th scope="col" className="text-sm font-medium text-gray-50 px-6 py-2 text-left">Notes</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-gray-700">
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                </tr>
-                <tr className="border-b border-gray-700">
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                  <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">Cell</td>
-                </tr>
+                {data.map(game => (
+                  <tr className="border-b border-gray-700" key={game.id}>
+                    <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">{game.name}</td>
+                    <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">{game.status}</td>
+                    <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">{game.platform}</td>
+                    <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">{game.priority !== null ? game.priority : ''}</td>
+                    <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">{game.releaseDate}</td>
+                    <td className="text-sm font-light text-gray-50 px-6 py-2 whitespace-nowrap">{game.dateFinished}</td>
+                    <td className="text-sm font-light text-gray-50 px-6 py-2">{game.notes}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
